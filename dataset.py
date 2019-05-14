@@ -1,4 +1,4 @@
-import urllib.request
+import urllib
 from tqdm import tqdm
 
 class DownloadProgressBar(tqdm):
@@ -6,7 +6,7 @@ class DownloadProgressBar(tqdm):
 
 url = "https://s3.amazonaws.com/nyc-tlc/trip+data/green_tripdata_2018-01.csv"
 
-r = requests.get(url)
+r = urllib.get(url)
 
 f = open(local_filename,'w')
 f.close()
